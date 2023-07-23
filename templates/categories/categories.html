@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Categories</title>
+</head>
+<body>
+    <h1>Categories</h1>
+    <ul>
+        {% for category in categories %}
+            <li>
+                {{ category.name }}
+                <img src="{{ category.icon.url }}" alt="{{ category.name }} Icon" width="50" height="50">
+            </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
