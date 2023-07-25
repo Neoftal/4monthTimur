@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from posts.models import Product, Hashtag, Category
+from posts.models import Product, Category
 
 
 def main_view(request):
@@ -16,7 +16,6 @@ def products_view(request):
         }
 
         return render(request, 'products/products.html', context=context_data)
-
 
 
 
@@ -38,6 +37,11 @@ def post_detail_view(request, id):
         }
 
         return render(request, 'products/detail.html', context=context_data)
+
+
+
+
+
 
 
 
