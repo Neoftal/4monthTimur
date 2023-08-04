@@ -1,9 +1,9 @@
 from django.shortcuts import render
 from django.shortcuts import redirect, HttpResponse
 from datetime import datetime
-from HW.models import Product, Hashtag, Review
-from Online_store_HW.forms import ProductCreateForm, ReviewCreateForm
-from Online_store_HW.constants import PAGINATION_LIMIT
+from posts.models import Product, Review
+from posts.forms import ProductCreateForm, ReviewCreateForm
+from posts.constants import PAGINATION_LIMIT
 
 
 def hello(request):
