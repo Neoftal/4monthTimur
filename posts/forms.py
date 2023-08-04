@@ -17,5 +17,15 @@ class ReviewCreateForm(forms.Form):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self.fields['product'].choices = [(product.id, product.title) for product in Product.objects.all()]
+from django import forms
 
+
+class RegisterForm(forms.Form):
+    username = forms.CharField(max_length=30)
+    password1 = forms.CharField(widget=forms.PasswordInput(), min_length=3)
+    password2 = forms.CharField(widget=forms.PasswordInput(), min_length=3)
+
+class LoginForm(forms.Form):
+    username = forms.CharField(max_length=30)
+    password =forms.CharField(widget=forms.PasswordInput(), min_length=3)
 
